@@ -51,5 +51,5 @@ jobs:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
                 prerelease: false
                 title: "OpenWRT PrivateRouter SHA ${{ env.GITHUB_SHA_SHORT }}"
-                automatic_release_tag: "OpenWRT-PrivateRouter-${{ env.GITHUB_SHA_SHORT }}"
+                automatic_release_tag: "OpenWRT-${{ env.GITHUB_SHA_SHORT }}"
                 files: images/*
