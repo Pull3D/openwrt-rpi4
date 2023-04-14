@@ -30,7 +30,7 @@ make image  PROFILE="rpi-4" \
                      samba4-libs luci-app-samba4 wireguard-tools luci-app-wireguard \
                      openvpn-openssl luci-app-openvpn watchcat openssh-sftp-client \
                      luci-base luci-ssl luci-mod-admin-full luci-theme-bootstrap bcm27xx-eeprom \
-                     kmod-usb-storage kmod-usb-ohci kmod-usb-uhci e2fsprogs fdisk resize2fs \
+                     kmod-usb-storage e2fsprogs fdisk resize2fs \
                      htop debootstrap luci-compat luci-lib-ipkg dnsmasq luci-app-ttyd \
                      irqbalance ethtool netperf speedtest-netperf iperf3 \
                      curl wget rsync file htop lsof less mc tree usbutils bash diffutils \
