@@ -1,6 +1,5 @@
 name: Build OpenWRT Images
-on:
-  workflow_dispatch
+on: [push]
 
 jobs:
     build:
@@ -44,12 +43,11 @@ jobs:
             - name: Get the current date
               run: echo "NOW=$(date +%F)" >> $GITHUB_ENV
 
-            - name: Create a release 
-              # uses: "marvinpinto/action-automatic-releases@latest" waiting for PR release on https://github.com/marvinpinto/action-automatic-releases/pull/2
+            - name: Create a release
               uses: "marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303"
               with:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
                 prerelease: false
-                title: "OpenWRT SHA ${{ env.GITHUB_SHA_SHORT }}"
-                automatic_release_tag: "OpenWRT ${{ env.GITHUB_SHA_SHORT }}"
+                title: "OpenWRT PrivateRouter SHA ${{ env.GITHUB_SHA_SHORT }}"
+                automatic_release_tag: "OpenWRT-PrivateRouter-${{ env.GITHUB_SHA_SHORT }}"
                 files: images/*
