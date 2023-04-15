@@ -44,7 +44,7 @@ jobs:
               run: echo "NOW=$(date +%F)" >> $GITHUB_ENV
 
             - name: Create a release
-              uses: "marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303"
+              uses: "timcosgrove/action-automatic-releases@latest"
               with:
                 repo_token: "${{ secrets.GITHUB_TOKEN }}"
                 prerelease: false
